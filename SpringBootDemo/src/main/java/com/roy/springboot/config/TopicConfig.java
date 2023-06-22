@@ -33,7 +33,7 @@ public class TopicConfig {
 	public TopicExchange setTopicExchange() {
 		return new TopicExchange(MyConstants.EXCHANGE_TOPIC);
 	}
-	//声明binding，需要声明一个roytingKey
+	//声明binding，需要声明一个routingKey
 	@Bean
 	public Binding bindTopicHebei1() {
 		return BindingBuilder.bind(topicQ1()).to(setTopicExchange()).with("hunan.*");
